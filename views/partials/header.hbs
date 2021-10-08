@@ -1,0 +1,41 @@
+<header id="header" class="alt">
+    <h1><a href="/">ΛPPΛRΛTUS</a></h1>
+    <nav id="nav" class="left">
+        <ul>
+            <li><a href="/invite">Invite</a></li>
+            <li><a href="/guilds">Manage Guilds</a></li>
+            <li><a href="/discord">Support Server</a></li>
+        </ul>
+    </nav>
+    <nav id="nav" class="right">
+        <ul>
+            <li>
+                {{#with user as |user|}}
+                    <div class="menuLauncher">
+                        <div class="avatar medium" style="background-image: url('https://cdn.discordapp.com/avatars/{{user.id}}/{{user.avatar}}.png;');"></div><a>{{user.name}}</a>
+                        <ul class="menuList">
+                            <li class="menuListItem"><a>My servers</a></li>
+                            <li class="menuListItem"><a>Logout</a></li>
+                        </ul>
+                    </div>
+                {{else}}
+                    <a href="/login">Login</a>
+                {{/with}}
+            </li>
+
+            <!-- <li class="special">
+                <a href="#menu" class="menuToggle"><span></span></a>
+                <div id="menu">
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/invite">Invite</a></li>
+                        <li><a href="/commands">Commands</a></li>
+                        <li><a href="/discord">Support Server</a></li>
+                        <li style=color:#D43F52;font-weight:700;><a href="/donate">Donate</a></li>
+                    </ul>
+                </div>
+
+            </li> -->
+        </ul>
+    </nav>
+</header>

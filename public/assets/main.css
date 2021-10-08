@@ -1,0 +1,266 @@
+@import url(fontawesome-all.min.css);
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,800,800italic");
+
+.theme-dark {
+	--prime: #ff6e48;
+	--backgound: #111217;
+	--forground: #15171D;
+
+	--yt: #ff0000;
+	--twitter: #1d9bf0;
+	--github: #fff;
+
+	--red:#ff3a48;
+	--green: #00f9a5;
+	--orange: #ff6e48;
+	--blue: #00edff;
+	--pink: #ff00aa;
+}
+
+body ::-webkit-scrollbar, html ::-webkit-scrollbar {
+    width: 0;
+}
+
+body, html {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    font-size: 10px;
+    scroll-behavior: smooth;
+    font-family: Roboto, sans-serif;
+	box-sizing: border-box;
+}
+body *, html * {
+    box-sizing: border-box;
+}
+a, li, p {
+    line-height: 1.6em;
+    font-size: 1.5rem;
+    color: #898c91;
+	text-decoration: none;
+}
+
+h1, h2, h3, h4, h5 {
+	margin: 0;
+    padding: 0;
+    font-family: Roboto Condensed, sans-serif;
+	color: #fff;
+}
+h2 {
+    font-size: 6rem;
+    line-height: 1.1em;
+    color: #fff;
+    margin: 0 0 4rem;
+}
+h3 {
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+#main {
+	position: absolute;
+	top: 0;
+	left: 0;
+	min-width: 100%;
+	min-height: 100%;
+	display: flex;
+	padding: 0;
+	margin: 0;
+}
+
+.sticky-side {
+	width: 50%;
+	min-height: 100vh;
+	position: fixed;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	display: flex;
+	flex-direction: column;
+	background-color: var(--forground);
+
+	}
+	.sticky-side .content {
+		min-height: 100%;
+		padding: 8rem;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		overflow-x: scroll;
+		/* overflow-y: hidden; */
+
+		}
+		.sticky-side .content .header {
+			position: relative;
+			top: 0;
+			left: 0;
+			}
+			.sticky-side .content .header a {
+				font-size: .8rem;
+			}
+
+article{
+	padding-top: 6rem;
+}
+
+article .title{
+	max-width: 40rem;
+	box-sizing: border-box;
+}
+
+article .description{
+	max-width: 40rem;
+}
+
+i {
+	/* margin: 1rem 0 .5rem; */
+}
+
+.social-media {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+
+}
+.social-media nav {
+	margin: 5rem 0 2rem;
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	flex-wrap: wrap;
+
+}
+.social-media nav a {
+    padding: 1rem;
+    background-color: var(--backgound);
+    margin: 0 1rem 1rem 0;
+    min-width: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+	border-radius: 1rem;
+}
+
+.social-media nav a span.name {
+	font-size: 1.2rem;
+}
+
+
+
+
+
+.content-side {
+	width: 50%;
+	margin: 0 0 0 50%;
+	padding: 8rem;
+	background-color: var(--backgound);
+
+	height: 110vh;
+}
+.content-side .content {
+    width: 100%;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.content-side .content nav {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(3rem, -50%);
+	display: flex;
+	flex-direction: column;
+	transition: all 0.25s;
+}
+
+.content-side .content nav a::before {
+	content: '';
+	display: inline-block;
+	width: 1rem;
+	height: 1rem;
+	background-color: #fff;
+	border-radius: 100%;
+}
+
+.content-side .content nav a span {
+	opacity: 0;
+	color: #fff;
+	margin-left: 1rem;
+	transition: all 0.25s;
+}
+
+.content-side .content nav a:hover span {
+	opacity: 1;
+}
+
+main-box {
+    width: 100%;
+    display: flex;
+    position: relative;
+    margin: 0 0 2rem;
+    overflow: hidden;
+	border-radius: 1rem;
+	background-color: var(--forground);
+}
+
+main-box .content {
+	width: 100%;
+    position: relative;
+    z-index: 2;
+    opacity: 0;
+}
+
+project-box {
+	width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+project-box .logo {
+	font-size: 1.4rem;
+    margin: 0 0 2rem;
+    color: #fff;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+}
+
+project-box .logo span {
+	margin: 0 0 0 1rem;
+}
+
+project-box .external-link {
+    font-size: 1.2rem;
+    color: #818181;
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+}
+
+project-box p {
+    margin: 1rem 0 3rem;
+    width: 100%;
+}
+
+project-box .counts {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+project-box .counts p {
+    width: auto;
+    color: #818181;
+    font-size: 1.2rem;
+    margin: 0 3rem 0 0;
+}
+
+project-box .counts p span {
+    padding: 0 0 0 .5rem;
+    color: #818181;
+}

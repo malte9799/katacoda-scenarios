@@ -1,0 +1,19 @@
+{{!-- {{> header}} --}}
+
+
+<header id="header" class="subheader" style="top:48px;background:transparent">
+    <h1><a href="/{{guild.id}}" style="font-size:0.9rem;"><img class="avatar" src='https://cdn.discordapp.com/icons/{{guild.id}}/{{guild.icon}}.jpg'>{{guild.name}}</a></h1>
+    <nav id="nav" class="right">
+        <ul>
+            <li><a href="/invite">Invite</a></li>
+            <li><a href="/guilds">Manage Guilds</a></li>
+            <li><a href="/discord">Support Server</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section id="user-info">
+    {{user.username}}
+</section>
+
+{{!-- {{> footer}} --}}
